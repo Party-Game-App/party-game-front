@@ -65,7 +65,7 @@ export default function Menu() {
           ref={menuRef}
           className={`${
             isVisible ? 'flex' : 'hidden'
-          } shadow-2xl flex-col text-sm bg-light-1 gap-2 rounded-lg p-2! items-center justify-center absolute right-0 top-5`}
+          } shadow-2xl flex-col text-sm z-10 bg-light-1 gap-2 rounded-sm p-2! items-center justify-center absolute right-0 top-5`}
         >
           {navInfos.map((item, index) => (
             <Link
@@ -81,21 +81,28 @@ export default function Menu() {
 
           <Link
             href={'/get-started'}
-            className="bg-dark-1 text-xs text-light-2 font-secondary font-medium w-32 uppercase rounded-lg duration-300 border-2 border-dark-1 hover:opacity-70 text-center p-1!"
+            className="bg-dark-1 text-xs text-light-2 font-secondary font-medium w-32 uppercase rounded-sm duration-300 border-2 border-dark-1 hover:opacity-70 text-center p-1!"
           >
             get started
           </Link>
 
           <Link
             href={'/get-started'}
-            className="bg-dark-1 text-xs text-light-2 font-secondary font-medium w-32 uppercase rounded-lg duration-300 border-2 border-dark-1 hover:bg-transparent hover:text-dark-1 text-center p-1!"
+            className="bg-dark-1 text-xs text-light-2 font-secondary font-medium w-32 uppercase rounded-sm duration-300 border-2 hover:scale-95 border-dark-1 hover:bg-transparent hover:text-dark-1 text-center p-1!"
           >
             get started
           </Link>
 
           <Link
             href={'/get-started'}
-            className="bg-dark-1 text-xs group text-light-2 font-secondary font-medium w-32 uppercase rounded-lg duration-300 border-2 border-dark-1 hover:bg-transparent hover:text-dark-1 text-center p-1!"
+            className="bg-dark-1 text-xs text-light-2 font-secondary font-medium w-32 uppercase rounded-sm duration-300 border-2 hover:scale-105 border-dark-1 hover:bg-transparent hover:text-dark-1 text-center p-1!"
+          >
+            get started
+          </Link>
+
+          <Link
+            href={'/get-started'}
+            className="bg-dark-1 text-xs group text-light-2 font-secondary font-medium w-32 uppercase rounded-sm duration-300 border-2 border-dark-1 hover:bg-transparent hover:text-dark-1 text-center p-1!"
           >
             <div className="relative overflow-hidden">
               <p className="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
