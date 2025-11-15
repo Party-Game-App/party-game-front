@@ -9,7 +9,7 @@
   --color-warning: #ffcc00;
   --color-info: #0063f7;
   --color-success: #06c270;
-  --color-fade: rgba(36, 44, 57, 20%);
+  --color-fade: rgba(36, 44, 57, 70%);
   --color-dark-1: #242c39;
   --color-dark-2: #1a202c;
   --color-dark-3: #2f3847;
@@ -18,6 +18,7 @@
   --color-light-2: #ffffff;
   --color-light-3: #9aa1b2;
   --color-light-4: #6b7384;
+
   --font-main: Roboto, sans-serif;
   --font-secondary: Orbitron, sans-serif;
 }
@@ -30,5 +31,9 @@
 
 :focus {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(166, 166, 166, 1);
+  box-shadow: 0 0 0 2px #ffa500;
+}
+
+input.border-error:focus {
+  box-shadow: 0 0 0 1px #ff3b3b;
 }
