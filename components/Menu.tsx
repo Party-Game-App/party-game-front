@@ -1,10 +1,10 @@
 'use client'
 
 import { TextAlignRightIcon } from '@phosphor-icons/react'
+import { Separator } from '@radix-ui/themes'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { NavInfosProps } from '../@types'
-import { Separator } from '@radix-ui/themes'
 
 const navInfos: NavInfosProps[] = [
   {
@@ -49,7 +49,7 @@ export default function Menu() {
   }, [])
 
   return (
-    <nav className="w-full h-10 font-main bg-white shadow flex justify-between items-center px-4!">
+    <nav className="font-main flex h-10 w-full items-center justify-between bg-white px-4! shadow">
       <Link href={'/'}>LOGO</Link>
 
       <section className="relative">
@@ -57,7 +57,7 @@ export default function Menu() {
           <TextAlignRightIcon
             onClick={toggleMenu}
             size={20}
-            className="cursor-pointer duration-300 hover:opacity-90 hover:scale-110"
+            className="cursor-pointer duration-300 hover:scale-110 hover:opacity-90"
           />
         </div>
 
@@ -65,13 +65,13 @@ export default function Menu() {
           ref={menuRef}
           className={`${
             isVisible ? 'flex' : 'hidden'
-          } shadow-2xl flex-col text-sm bg-light-1 gap-2 rounded-lg p-2! items-center justify-center absolute right-0 top-5`}
+          } bg-light-1 absolute top-5 right-0 z-10 flex-col items-center justify-center gap-2 rounded-sm p-2! text-sm shadow-2xl`}
         >
           {navInfos.map((item, index) => (
             <Link
               href={item.url}
               key={index}
-              className="border-y border-transparent w-14 duration-300 hover:opacity-70 hover:border-b-dark-1 text-center"
+              className="hover:border-b-dark-1 w-14 border-y border-transparent text-center duration-300 hover:opacity-70"
             >
               {item.label}
             </Link>
@@ -81,28 +81,14 @@ export default function Menu() {
 
           <Link
             href={'/get-started'}
-            className="bg-dark-1 text-xs text-light-2 font-secondary font-medium w-32 uppercase rounded-lg duration-300 border-2 border-dark-1 hover:opacity-70 text-center p-1!"
-          >
-            get started
-          </Link>
-
-          <Link
-            href={'/get-started'}
-            className="bg-dark-1 text-xs text-light-2 font-secondary font-medium w-32 uppercase rounded-lg duration-300 border-2 border-dark-1 hover:bg-transparent hover:text-dark-1 text-center p-1!"
-          >
-            get started
-          </Link>
-
-          <Link
-            href={'/get-started'}
-            className="bg-dark-1 text-xs group text-light-2 font-secondary font-medium w-32 uppercase rounded-lg duration-300 border-2 border-dark-1 hover:bg-transparent hover:text-dark-1 text-center p-1!"
+            className="bg-dark-1 group text-light-2 font-secondary border-dark-1 hover:text-dark-1 w-32 rounded-sm border-2 p-1! text-center text-xs font-medium uppercase duration-300 hover:bg-transparent"
           >
             <div className="relative overflow-hidden">
-              <p className="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+              <p className="duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:-translate-y-7">
                 get started
               </p>
 
-              <p className="absolute top-7 left-2.5 text-center group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+              <p className="absolute top-7 left-2.5 text-center duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:top-0">
                 get started
               </p>
             </div>
